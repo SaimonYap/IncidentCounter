@@ -17,7 +17,7 @@ function main() {
       const start = new Date(startDate);
   
       const diffMs = now - start;
-      const totalHours = Math.floor(diffMs / 1000 );
+      const totalHours = Math.floor(diffMs / 1000 / 60 / 60);
       const days = Math.floor(totalHours / 24);
       const hours = totalHours % 24;
   
