@@ -24,7 +24,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('images/Background.png'); /* optional: a dark background to match your counter theme */
+    background-image: url('images/Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
   }
 
