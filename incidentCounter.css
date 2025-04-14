@@ -33,7 +33,7 @@ body {
     height: 550px;
     background-color: #9c413b;
     box-shadow: 30px 30px 30px #6d231e;
-    padding: 50px 270px;
+    padding: 60px 270px;
     border-radius: 20px;
 }
 
@@ -62,7 +62,7 @@ body {
 
 .time-label {
   font-family: "Helvetica";
-  font-weight: bold;
+  font-weight: 600;
   color: #ffffff;
   font-size: 30px;
   letter-spacing: 3px;
