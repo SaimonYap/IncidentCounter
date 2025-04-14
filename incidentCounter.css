@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* line-height: 1.5; */
+}
+
+@font-face {
+  font-family: "Digital Display";
+  src: url("https://assets.codepen.io/5256004/Digital-Display.woff2") format("woff2"),
+    url("fonts/Digital-Display.woff2") format("woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/Background.png'); /* optional: a dark background to match your counter theme */
+    margin: 0;
+  }
+
+.box{
+    width: 600px;
+    height: 420px; 
+    background-color: #000000;
+    padding: 10px;
+    box-shadow: black;
+}
+
+.main {
+  width: 580px;
+  height: 400px;
+  text-align: center;
+  border: 4px solid #ffffff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+  border-radius: 10px;
+}
+
+.title{
+    grid-column: span 2;
+    font-family: "Helvetica";
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 3px;
+    padding-top: 30px;
+}
+
+.time-label {
+  font-family: "Helvetica";
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 3px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.counter-box {
+  width: 240px;
+  height: 140px;
+  background: #080001;
+  margin: auto;
+  border: 1px solid #b3b3b3;
+  border-radius: 10px;
+}
+
+.counter-shadow {
+  font-family: "Digital Display";
+  font-size: 160px;
+  position: relative;
+  bottom: 105px;
+  text-align: end;
+  color: rgb(91, 39, 39);
+  opacity: 30%;
+}
+
+.days-counter,
+.hours-counter {
+  font-family: "Digital Display";
+  color: #fb002e;
+  font-size: 160px;
+  margin: auto;
+  padding: 20px 10px 0 10px;
+  text-align: end;
+}
+
+#days-tally,
+#hours-tally{
+    text-shadow: 0 0 20px #d40101;
+}
+
+.incrementors {
+  padding: 40px 0 0 0;
+}
+
+.reset-column {
+  grid-column: span 2;
+}
+
+.reset-counter {
+  all: unset;
+  font-family: "Helvetica";
+  font-size: 30px;
+  width: 200px;
+  border: 3px solid #590000;
+  outline: 1px solid #b3b3b3;
+  background-color: #870d23;
+  padding: 8px 12px 6px;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.reset-counter:hover {
+  background-color: #dd021b;
+  color: #ffffff;
+}
+
+.reset-counter:active {
+  color: #f94f6d;
+  background-color: 080001;
+}
