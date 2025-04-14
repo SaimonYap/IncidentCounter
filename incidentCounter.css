@@ -127,11 +127,7 @@ body {
 }
 
 .reset-counter:hover {
-  background-color: #dd021b;
-  color: #ffffff;
+  background-color: rgb(161, 52, 46);
+  color: #d2d2d2;
 }
 
-.reset-counter:active {
-  color: #f94f6d;
-  background-color: 080001;
-}
