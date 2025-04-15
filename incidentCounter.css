@@ -24,19 +24,48 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('images/Background.png');
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
   }
 
+.bgRed{
+    background-image: url("images/RedBackground.png");
+    color: white;
+}
+
+.bgBlue{
+    background-image: url("images/BlueBackground.png");
+    color: white;
+}
+
+.bgWhite{
+    background-image: url("images/WhiteBackground.png");
+    color: black;
+}
+
 .box{
     width: 1100px;
     height: 550px;
-    background-color: #9c413b;
-    box-shadow: 30px 30px 30px #6d231e;
     padding: 60px 270px;
     border-radius: 20px;
+}
+
+.b-red{
+    background-color: #9c413b;
+    box-shadow: 30px 30px 30px #6d231e;
+}
+
+.b-blue{
+    background-color: #1f80e0;
+    box-shadow: 30px 30px 30px #072038;
+}
+
+.b-white{
+    background-color: #ffffff;
+    border-top: 1px solid rgb(244, 244, 244);
+    border-left: 1px solid rgb(224, 224, 224);
+    box-shadow: 30px 30px 30px #5d5d5d;
 }
 
 .main {
@@ -56,7 +85,6 @@ body {
     grid-column: span 2;
     font-family: "Helvetica";
     font-weight: bold;
-    color: #ffffff;
     font-size: 32px;
     letter-spacing: 3px;
     margin-top:10px;
@@ -65,7 +93,6 @@ body {
 .time-label {
   font-family: "Helvetica";
   font-weight: 600;
-  color: #ffffff;
   font-size: 30px;
   letter-spacing: 3px;
   padding-top: 20px;
@@ -121,15 +148,33 @@ body {
   font-weight: bold;
   width: 150px;
   height: 60px;
-  background-color: #c13a32;
   padding: 8px 12px 6px;
   margin-top:50px;
-  color: #ffffff;
   border-radius: 10px;
 }
 
-.reset-counter:hover {
-  background-color: rgb(161, 52, 46);
-  color: #d2d2d2;
+.rc-red{
+    background-color: #c13a32;
 }
+
+.rc-blue{
+    background-color: #89c4ff;
+}
+
+.rc-white{
+    background-color: #e7e7e7;
+    color: black;
+}
+
+.rc-red:hover {
+  background-color: rgb(112, 35, 31);
+}
+
+.rc-blue:hover {
+    background-color: #015dba;
+  }
+
+  .rc-white:hover {
+    background-color: rgb(154, 154, 154);
+  }
 

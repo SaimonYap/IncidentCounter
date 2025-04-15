@@ -5,11 +5,15 @@ function main() {
     const hoursTotal = document.getElementById("hours-tally");
     const resetButton = document.getElementById("resetButton");
   
+    // Get unique counter key from body attribute
+    const counterKey = document.body.getAttribute("data-counter-key") || "defaultCounter";
+    const startDateKey = `${counterKey}_startDate`;
+  
     // Load or set startDate
-    let startDate = localStorage.getItem("startDate");
+    let startDate = localStorage.getItem(startDateKey);
     if (!startDate) {
       startDate = new Date().toISOString();
-      localStorage.setItem("startDate", startDate);
+      localStorage.setItem(startDateKey, startDate);
     }
   
     function updateDisplay() {
@@ -21,18 +25,18 @@ function main() {
       const days = Math.floor(totalHours / 24);
       const hours = totalHours % 24;
   
-      daysTotal.textContent = days < 10 ? + days : days;
-      hoursTotal.textContent = hours < 10 ? + hours : hours;
+      daysTotal.textContent = days < 10 ? +days : days;
+      hoursTotal.textContent = hours < 10 ? +hours : hours;
   
-      console.log(`Days: ${days}, Hours: ${hours}`);
+      console.log(`[${counterKey}] Days: ${days}, Hours: ${hours}`);
     }
   
     function resetCounter() {
       const confirmReset = window.confirm("Are you sure you want to reset the counter?");
       if (confirmReset) {
         startDate = new Date().toISOString();
-        localStorage.setItem("startDate", startDate);
-        console.log("Counter reset.");
+        localStorage.setItem(startDateKey, startDate);
+        console.log(`[${counterKey}] Counter reset.`);
         updateDisplay();
       }
     }
